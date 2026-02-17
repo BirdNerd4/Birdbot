@@ -72,3 +72,9 @@ async def on_ready():
     print(f"Logged in as {bot.user}")
 
 bot.run(TOKEN)
+
+
+# redeploy test
+git add bot.py
+git commit -m "Force redeploy to update intents"
+git push origin main
