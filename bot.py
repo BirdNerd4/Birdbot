@@ -10,7 +10,11 @@ YEAR_CHANNEL_ID = 1473138431000580126   # Replace with your #yearboard channel I
 DATA_FILE = "data.json"
 # ----------------
 
+# Enable message content intent so the bot can read commands
 intents = discord.Intents.default()
+intents.message_content = True
+intents.guilds = True  # needed to see channels
+
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # Load or create database
@@ -38,6 +42,9 @@ def build_board(tab_name):
 
 async def post_board(channel_id, tab_name):
     channel = bot.get_channel(channel_id)
+    if not channel:
+        print(f"Channel {channel_id} not found!")
+        return
     text = build_board(tab_name)
     pinned = await channel.pins()
     if pinned:
