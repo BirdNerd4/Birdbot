@@ -5,8 +5,8 @@ import os
 
 # ---- CONFIG ----
 TOKEN = os.environ['DISCORD_TOKEN']
-LIFER_CHANNEL_ID = 1473138417809358991  # Replace with your #liferboard channel ID
-YEAR_CHANNEL_ID = 1473138431000580126   # Replace with your #yearboard channel ID
+LIFER_CHANNEL_ID = 1473558399303028850  # Replace with your #liferboard channel ID
+YEAR_CHANNEL_ID = 1473558470996267183   # Replace with your #yearboard channel ID
 DATA_FILE = "data.json"
 # ----------------
 
